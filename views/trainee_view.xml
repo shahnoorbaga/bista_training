@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+<!--Bista Trainee window Tree View-->
+    <record model="ir.ui.view" id="bista_training.list">
+      <field name="name">bista_training.trainee.form</field>
+      <field name="model">bista_training.trainee</field>
+      <field name="arch" type="xml">
+
+
+          <form>
+          <sheet>
+            <group>
+<!--              column 1-->
+              <group>
+                <field name="name" readonly="1" placeholder="Name"/>
+                  <field name="personal_email_id" placeholder="Email"/>
+              </group>
+<!--              column 2-->
+<!--              notebook-->
+              <group>
+              <group>
+                  <field name="first_name" placeholder="First Name" />
+                  <field name="last_name" placeholder="Last Name"/>
+                  <field name="trainee_id" readonly="1"/>
+
+                  <field name="gender">
+                  <select class="form-control" name="gender">
+                         <option t-attf-value="'male'">Male</option>
+                         <option t-attf-value="'female'">Female</option>
+                         <option t-attf-value="'other'">Other</option>
+                   </select></field>
+                  <field name="dob"/>
+
+              </group>
+              <group>
+                  <field name="emp_code" placeholder="Employee Code"/>
+                  <field name="location"/>
+                  <field name="designation"/>
+
+                  <field name="doj" />
+                  <field name="profile_image" widget='image'/>
+
+              </group>
+            </group>
+            </group>
+
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+<!-- action for bista training window-->
+
+<!-- action for trainee master-->
+        <record model="ir.actions.act_window" id="bista_training.action_trainee_master">
+            <field name="name">Bista Trainee</field>
+      <field name="res_model">bista_training.trainee</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  </data>
+</odoo>
