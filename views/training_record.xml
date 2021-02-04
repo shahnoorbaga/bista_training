@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+<!--Bista Trainee window Tree View-->
+    <record model="ir.ui.view" id="bista_training_training_record_list">
+      <field name="name">bista_training.training_record form</field>
+      <field name="model">bista_training.training_record</field>
+      <field name="arch" type="xml">
+
+
+
+          <form>
+ <header>
+
+                  <field name="stages" widget="statusbar" statusbar_visible="draft,progress,done" options="{'clickable':'1'}"/>
+              </header>
+          <sheet>
+              <h2> <field name="name" class="oe_title"/></h2>
+            <group>
+<!--              column 1-->
+              <group>
+
+                <field name="date" String="date"/>
+                  <field name="batch"/>
+
+
+              </group>
+<!--              column 2-->
+<!--              notebook-->
+              </group>
+              <notebook>
+
+                            <page string="Training Lines">
+                                <field name="training_lines" >
+                                <tree string="training_lines" editable="bottom">
+                                    <field name="name"/>
+                                   <field name="remarks_comments"/>
+                                    <field name="attendence_status"/>
+                               </tree>
+                                </field>
+                            </page>
+
+                  <page string="Topics Covered">
+                                <field name="topics_covered" >
+                                <tree string="topics_covered" editable="bottom">
+                                    <field name="topic"/>
+                                    <field name="name"/>
+                                   <field name="remarks_comments"/>
+
+                               </tree>
+                                </field>
+                            </page>
+
+                    <page string="Attendence">
+                                <field name="attendence" editable="bottom">
+                                <tree string="attendence">
+                                    <field name="trainee"/>
+                                      <field name="date"/>
+                                    <field name="log_in_time"/>
+                                   <field name="log_out_time"/>
+                                     <field name="hours"/>
+
+                               </tree>
+                                </field>
+                            </page>
+                        </notebook>
+
+               </sheet>
+
+        </form>
+      </field>
+    </record>
+
+         <record model="ir.actions.act_window" id="bista_training.action_training_record">
+      <field name="name">Bista Training Record</field>
+      <field name="res_model">bista_training.training_record</field>
+      <field name="view_mode">tree,form</field>
+
+    </record>
+
+        </data>
+      </odoo>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+      <!-- Trainee Stages Form View    -->
+      <record model="ir.ui.view" id="bista_training_training_stages_list">
+      <field name="name">bista_training.training_stages.form</field>
+      <field name="model">bista_training.training_stages</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <group>
+                  <field name="name" class="oe_title" required="1"/>
+                  <field name="batch_available"/>
+                  <field name="training_available"/>
+                  <field name="status"/>
+              </group>
+              <group>
+
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+        <!-- action for stages master-->
+    <record model="ir.actions.act_window" id="bista_training.action_training_stages_master">
+      <field name="name">Bista Training Stages</field>
+      <field name="res_model">bista_training.training_stages</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    </data>
+</odoo>

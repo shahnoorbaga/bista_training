@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <data>
+              <record id="module_category_training_id" model="ir.module.category">
+                  <field name="name">Training Management</field>
+                  <field name="sequence">25</field>
+
+
+              </record>
+
+
+
+
+   </data>
+</odoo>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+      <template id="bista_training.report_bista_training">
+
+              <t t-call="web.html_container">
+                 <t t-foreach="docs" t-as="o">
+
+                  <t t-call="web.external_layout">
+
+                  <div class="page">
+
+                   <h2>Report</h2>
+                      <p>
+                          <b>Trainee Name: </b> <span t-field="o.name"/>
+                          <br/>
+                          <b>Trainee ID: </b><span t-field="o.trainee_id"/>
+                          <br/>
+                          <b>Employee Code: </b> <span t-field="o.emp_code"/>
+                          <br/>
+                          <b>Email ID: </b> <span t-field="o.personal_email_id"/>
+                          <br/>
+                          <b>Linkedin Profile URL: </b><span t-field="o.linkedin"/>
+                          <br/>
+                          <b>Date Of Birth: </b><span t-field="o.dob"/>
+                          <br/>
+                          <b>Date OF Joining: </b><span t-field="o.doj"/>
+                          <br/>
+                          <b>Location:</b> <span t-field="o.location"/>
+                          <br/>
+                          <b>Designation:</b> <span t-field="o.designation"/>
+                          <br/>
+                          <b>Employment status:</b> <span t-field="o.state"/>
+
+
+
+
+                      </p>
+
+
+                 </div>
+
+                  </t>
+                 </t>
+              </t>
+      </template>
+
+</data>
+</odoo>

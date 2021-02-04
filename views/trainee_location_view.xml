@@ -16,7 +16,7 @@
             <group>
 <!--              column 1-->
               <group>
-                <field name="location_name" required="1" placeholder="Location Name"/>
+                <field name="name" required="1" placeholder="Location Name"/>
                 <field name="street1" placeholder="Street 1" />
                   <field name="street2" placeholder="Street 2"/>
                   <field name="city" placeholder="City"/>

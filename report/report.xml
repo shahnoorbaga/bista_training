@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+<record id="qweb_report_training" model="ir.actions.report">
+
+<field name="name">Print Trainee Report</field>
+    <field name="report_type">qweb-pdf</field>
+
+<field name="report_name">bista_training.report_bista_training</field>
+    <field name="report_file">bista_training.report_bista_training</field>
+
+<field name="model">bista_training.trainee</field>
+
+<field name="binding_model_id" ref="model_bista_training_trainee"/>
+
+<field name="binding_type">report</field>
+
+</record>
+</data>
+    </odoo>

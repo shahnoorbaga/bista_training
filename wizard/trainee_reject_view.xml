@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+  <record model="ir.ui.view" id="trainee_reject_view_form">
+     <field name="name">trainee reject form</field>
+       <field name="model">bista_training.trainee_reject</field>
+       <field name="arch" type="xml">
+           <form string="trainee reject">
+               <group>
+                   <group>
+                       <field name="trainee_id"/>
+                       <field name="name"/>
+
+                   </group>
+               </group>
+
+
+<footer>
+
+    <button string="Reject" name="action_reject" type="object" class="oe_highlight"/>
+    <button string="cancel" class="btn btn-default" special="cancel"/>
+</footer>
+           </form>
+
+
+
+
+
+       </field>
+
+
+
+
+
+  </record>
+</data>
+</odoo>

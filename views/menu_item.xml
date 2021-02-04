@@ -21,7 +21,6 @@
               action="bista_training.action_trainee_master"/>
 
 
-
          <menuitem name="Trainer" id="bista_training.menu_trainer_menu" parent="bista_training.menu_1"
               action="bista_training.action_trainer_master"/>
 
@@ -45,6 +44,28 @@
 
          <menuitem name="Training Topics" id="bista_training.menu_training_topics_menu" parent="bista_training.menu_1"
               action="bista_training.action_training_topics_master"/>
+
+         <menuitem name="Training Stages" id="bista_training.menu_training_stages_menu" parent="bista_training.menu_1"
+                 action="bista_training.action_training_stages_master"/>
+
+         <menuitem name="Training Record" id="bista_training.menu_2" parent="bista_training.menu_root"/>
+
+         <menuitem name="Batch" id="bista_training.menu_batch_menu" parent="bista_training.menu_2"
+                 action="bista_training.action_batch_record"/>
+
+         <menuitem name="Training Record" id="bista_training.menu_training_record_menu" parent="bista_training.menu_2"
+                 action="bista_training.action_training_record"/>
+
+         <menuitem name="Training Record Line" id="bista_training.menu_training_record_line_menu" parent="bista_training.menu_2"
+                 action="bista_training.action_training_record_line"/>
+
+         <menuitem name="Trainee attendence" id="bista_training.menu_training_attendence_menu" parent="bista_training.menu_2"
+                 action="bista_training.action_trainee_attendence_record"/>
+
+
+         <menuitem name="Training Topic Line" id="bista_training.menu_training_topic_line_menu" parent="bista_training.menu_2"
+                 action="bista_training.action_training_topic_line"/>
+
 
 
 

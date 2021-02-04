@@ -6,6 +6,6 @@ class training_subjects(models.Model):
 
     name = fields.Char('Name',required=True)
     description = fields.Html("Description")
-    topics = fields.One2many('bista_training.training_topics','name',String="Topic Name")
+    topics = fields.One2many('bista_training.training_topics','name',string="Topic Name")
     trainer = fields.Many2many('bista_training.trainer','trainer_name')
 

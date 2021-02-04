@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+<!--Bista Trainee window Tree View-->
+    <record model="ir.ui.view" id="bista_training_training_topics_line_list">
+      <field name="name">bista_training.training_topic_line form</field>
+      <field name="model">bista_training.training_topic_line</field>
+      <field name="arch" type="xml">
+
+
+
+          <form>
+          <sheet>
+            <group>
+<!--              column 1-->
+              <group>
+                <field name="topic"/>
+                <field name="name"/>
+                  <field name="remarks_comments"/>
+              </group>
+<!--              column 2-->
+<!--              notebook-->
+              </group>
+               </sheet>
+        </form>
+      </field>
+    </record>
+
+         <record model="ir.actions.act_window" id="bista_training.action_training_topic_line">
+      <field name="name">Bista Training topic line</field>
+      <field name="res_model">bista_training.training_topic_line</field>
+      <field name="view_mode">tree,form</field>
+
+    </record>
+
+        </data>
+      </odoo>

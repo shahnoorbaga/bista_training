@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+<!--Bista Trainee window Tree View-->
+    <record model="ir.ui.view" id="bista_training_batch_form">
+      <field name="name">bista_training.batch form</field>
+      <field name="model">bista_training.batch</field>
+      <field name="arch" type="xml">
+
+          <form>
+              <header>
+                  <field name="stages" widget="statusbar" statusbar_visible="draft,progress,done" options="{'clickable':'1'}"/>
+              </header>
+
+          <sheet>
+                <div class="oe_title">
+                  <h1>
+                <field name="name" required="1" placeholder="Name"/>
+                  </h1>
+              </div>
+            <group>
+                  <group>
+
+                  <field name="start_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                  <field name="end_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                  <field name="location"/>
+                      <field name="trainers" widget="many2many_tags"/>
+                  <field name="state"/>
+                </group>
+              </group>
+              <notebook>
+                  <page string="Trainee">
+                      <field name="trainees" >
+                          <tree string="Trainees" editable="bottom">
+                              <field name="trainee_id"/>
+                              <field name="name"/>
+                              <field name="personal_email_id"/>
+                               </tree>
+                      </field>
+                            </page>
+     <page string='Training topics'>
+         <field name="training_topics">
+             <tree string="training_topics">
+                 <field name="name"/>
+                 <field name="subject"/>
+             </tree>
+         </field>
+     </page>
+                        </notebook>
+               </sheet>
+        </form>
+      </field>
+    </record>
+
+      <record model="ir.actions.act_window" id="bista_training.action_batch_record">
+      <field name="name">Bista Trainee batch</field>
+      <field name="res_model">bista_training.batch</field>
+      <field name="view_mode">tree,form</field>
+
+    </record>
+
+        </data>
+      </odoo>
